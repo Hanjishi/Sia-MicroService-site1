@@ -16,7 +16,7 @@ use Throwable;
 class Handler extends ExceptionHandler
 {
     use ApiResponser;
-    
+
     /**
      * A list of the exception types that should not be reported.
      *
@@ -84,7 +84,7 @@ class Handler extends ExceptionHandler
         if (env('APP_DEBUG', false)) {
             return parent::render($request, $exception);
         }
-        
+
         return $this->errorResponse('Unexpected error. Try later', Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }

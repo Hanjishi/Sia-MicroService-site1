@@ -10,11 +10,8 @@ class User extends Model
     protected $fillable = [
         'username', 'password', 'gender', 'jobid'];
     
-    public $timestamps = false;
+        public $timestamps = false;
+        protected $primaryKey = 'userid';
+        protected $hidden = ['password'];
 
-    protected $primaryKey = 'userid';
-    
-    protected $hidden = [
-      'password',
-    ];
 }

@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserJob extends Model{
-    protected $table = 'tbluserjob';
+class UserJob extends Model
+{
+    protected $table = 'tbluserjob'; 
 
     protected $fillable = [
-        'jobid', 'jobname'
+        'jobid', 'jobname', 
     ];
 
     public $timestamps = false;
-
-    protected $primaryKey = 'jobid';
+    protected $primaryKey = 'jobid'; 
 }
