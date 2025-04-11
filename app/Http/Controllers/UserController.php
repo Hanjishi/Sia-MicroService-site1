@@ -40,7 +40,6 @@ class UserController extends Controller
         ];
 
         $this->validate($request,$rules);
-        // the table tbluserjob
         $userjob = UserJob::findOrFail($request->jobid);
         $user = User::create($request->all());
         return $this->successResponse($user,Response::HTTP_CREATED);
